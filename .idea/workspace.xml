@@ -27469,7 +27469,7 @@
       <workItem from="1604697552346" duration="529000" />
       <workItem from="1604699112717" duration="298000" />
       <workItem from="1604702804918" duration="8313000" />
-      <workItem from="1604790980045" duration="3941000" />
+      <workItem from="1604790980045" duration="8005000" />
     </task>
     <servers />
   </component>
@@ -27477,6 +27477,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="147" y="23" width="800" height="717" key="#Intentions" timestamp="1604829226781">
+      <screen x="0" y="23" width="1280" height="717" />
+    </state>
+    <state x="147" y="23" width="800" height="717" key="#Intentions/0.23.1280.717@0.23.1280.717" timestamp="1604829226781" />
     <state x="386" y="258" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604707082012">
       <screen x="0" y="23" width="1280" height="726" />
     </state>

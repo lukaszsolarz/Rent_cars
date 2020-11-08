@@ -7,7 +7,25 @@
 </head>
 
 <body>
+<h2>Wszystkie dostępne auta w bazie:</h2>
+<br/>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
 
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
 <?php
 
 $conn = new mysqli('localhost', 'root', '', 'rent_cars');
