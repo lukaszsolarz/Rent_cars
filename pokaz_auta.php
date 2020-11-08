@@ -34,11 +34,28 @@ $wynik=$conn ->query("SELECT * FROM cars");
 if($wynik ->num_rows >0)
 {
     echo "<table>";
+    echo "<tr>";
+        echo "<th> ID</th>";
+        echo "<th> Marka</th>";
+        echo "<th> Model</th>";
+        echo "<th> Nadwozie</th>";
+        echo "<th> Rok</th>";
+        echo "<th> Pojemność</th>";
+        echo "<th> Przbieg</th>";
+
+    echo "</tr>";
     while ($wiersz = $wynik ->fetch_assoc())
     {
         echo "<tr>";
-        echo "<td>"."ID:  ".$wiersz["id_cars"]." || ". " Marka:  ".$wiersz["brand"]." || "."Model:  ".$wiersz["model"]." || "." Nadwozie:  ".$wiersz["body"]." || "." Rok produkcji:  ".$wiersz["production_year"]." || "."Pojemność:  ".$wiersz["capacity"]." || "." Przebieg:  ".$wiersz["milage"]." km.";
-        echo "</td>";
+
+
+        echo "<td>".$wiersz["id_cars"]."</td>";
+        echo "<td>".$wiersz["brand"]."</td>";
+        echo "<td>".$wiersz["model"]."</td>";
+        echo "<td>".$wiersz["production_year"]."</td>";
+        echo "<td>".$wiersz["capacity"]."</td>";
+        echo "<td>".$wiersz["body"]."</td>";
+        echo "<td>".$wiersz["milage"]." km. "."</td>";
         echo "</tr>";
 
     }
