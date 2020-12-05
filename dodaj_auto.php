@@ -16,7 +16,7 @@
 
 <form class="form" method="post">
     <div class="form-row">
-        <label for="name">Nrumer rejestracyjny </label>
+        <label for="name">Numer rejestracyjny </label>
         <input type="text"  name="reg_number" required> *
     </div>
     <br>
@@ -30,6 +30,55 @@
         <input type="text"  name="milage"  required> *
     </div>
     <br>
+
+
+    <div class="form-row">
+        <label for="mark" >Marka: </label>
+        <select name="select_marka" id="id_marka" required>
+            <option value=""></option>
+            <option value="toyota">Toyota</option>
+            <option value="porsche">Porsche</option>
+            <option value="saab">Saab</option>
+            <option value="volkswagen">Volkswagen</option>
+            <option value="audi">Audi</option>
+        </select> *
+    </div>
+    <br>
+    <div>
+    <label for = "capacity"> Pojemność </label>
+    <select name="select_capacity" id="Pojemnosc" required>
+        <option value=""></option>
+        <option value="0.8">0.8</option>
+        <option value="0.9">0.9</option>
+        <option value="1.0">1.0</option>
+    </select> *
+    </div>
+    <br>
+    <div>
+    <label for = "years_production"> Rok produkcji </label>
+    <select name="select_years_production" id="id_years_production" required> *
+        <option value=""></option>
+        <option value="1996">1995</option>
+        <option value="1996">1996</option>
+        <option value="1997">1997</option>
+        <option value="1997">1998</option>
+        <option value="1997">1999</option>
+    </select> *
+    </div>
+    <br>
+    <div>
+    <label for = "label_body"> Rodzaj nadwozia</label>
+    <select name="select_body" id="Rodzaj nadwozia" required>
+        <option value = ""></option>
+        <option value = "kombi">Kombi</option>
+        <option value = "sedan">Sedan</option>
+        <option value = "hatchback">Hatchback</option>
+        <option value = "suv">SUV</option>
+        <option value = "coupe">Coupe</option>
+        <option value = "van">Van</option>
+    </select> *
+    </div>
+    <br>
     <div class="form-message"></div>
     <div class="form-row">
         <br>
@@ -41,59 +90,9 @@
 
 
 
-<!--    <div class="form-row">-->
-<!--    <label for="mark" >Marka:</label>-->
-<!--    <select name="select_marka" id="id_marka">-->
-<!--        <option value="blank"></option>-->
-<!--        <option value="toyota">Toyota</option>-->
-<!--        <option value="porsche">Porsche</option>-->
-<!--        <option value="saab">Saab</option>-->
-<!--        <option value="volkswagen">Volkswagen</option>-->
-<!--        <option value="audi">Audi</option>-->
-<!---->
-<!--    </select>-->
-<!--    </div>-->
 
-<!--    <div class="form-message" </div>-->
-<!--    <div class="form-row">-->
-<!--        <br>-->
-<!--        <button type="submit" class="button submit-btn">-->
-<!--            Wyślij-->
-<!--        </button>-->
-<!--    </div>-->
-<!--</form>-->
-<!---->
-<!--    <label for = "capacity"> Pojemność </label>-->
-<!--    <select name="select_capacity" id="Pojemnosc">-->
-<!--        <option value="0.8">0.8</option>-->
-<!--        <option value="0.9">0.9</option>-->
-<!--        <option value="1.0">1.0</option>-->
-<!---->
-<!---->
-<!--    </select>-->
-<!--    <br/>-->
-<!--    <br/>-->
-<!---->
-<!--    <label for = "years_production"> Rok produkcji </label>-->
-<!--    <select name="select_years_production" id="id_years_production">-->
-<!--        <option value="1996">1996</option>-->
-<!--        <option value="1997">1997</option>-->
-<!---->
-<!--    </select>-->
-<!--    <br/>-->
-<!--    <br/>-->
-<!---->
-<!--    <label for = "label_body"> Rodzaj nadwozia</label>-->
-<!--    <select name="select_body" id="Rodzaj nadwozia">-->
-<!--        <option value = "kombi">Kombi</option>-->
-<!--        <option value = "sedan">Sedan</option>-->
-<!--        <option value = "hatchback">Hatchback</option>-->
-<!--        <option value = "suv">SUV</option>-->
-<!--        <option value = "coupe">Coupe</option>-->
-<!--        <option value = "van">Van</option>-->
-<!--    </select>-->
-<!--    <br/>-->
-<!--    <br/>-->
+
+
 
 
 <!--    <br/>-->
@@ -104,9 +103,13 @@
 
 <script>
     const form = document.querySelector("form");
-    const inputName = form.querySelector("input[name=reg_number]");
-    const inputEmail = form.querySelector("input[name=model]");
-    const inputMark = form.querySelector("input[name=milage]");
+    const inputRegNumber = form.querySelector("input[name=reg_number]");
+    const inputModel = form.querySelector("input[name=model]");
+    const inputMileage = form.querySelector("input[name=milage]");
+    const inputMark = form.querySelector("select[name=select_marka]");
+    const inputCapacity = form.querySelector("select[name=select_capacity]");
+    const inputYearsProduction = form.querySelector("select[name=select_years_production]");
+    const inputBody = form.querySelector("select[name=select_body]");
     const formMessage = form.querySelector(".form-message");
 
     form.setAttribute("novalidate", true);
@@ -119,15 +122,27 @@
 //-------------------------
 //2 etap - sprawdzamy poszczególne pola gdy ktoś chce wysłać formularz
 //-------------------------
-        if (!inputName.checkValidity()) {
+        if (!inputRegNumber.checkValidity()) {
             formErrors.push("Numer rejestracyjny");
         }
 
-        if (!inputEmail.checkValidity()) {
+        if (!inputModel.checkValidity()) {
             formErrors.push("Model");
         }
-        if (!inputMark.checkValidity()) {
+        if (!inputMileage.checkValidity()) {
             formErrors.push("Przebieg");
+        }
+        if (!inputMark.checkValidity()) {
+            formErrors.push("Marka");
+        }
+        if (!inputCapacity.checkValidity()) {
+            formErrors.push("Pojemność");
+        }
+        if (!inputYearsProduction.checkValidity()) {
+            formErrors.push("Rok produkcji");
+        }
+        if (!inputBody.checkValidity()) {
+            formErrors.push("Rodzaj nadwozia");
         }
 
         if (!formErrors.length) { //jeżeli nie ma błędów wysyłamy formularz
