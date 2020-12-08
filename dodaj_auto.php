@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Wypozyczalnia - pokaż auta</title>
 </head>
-
+<h1>Dodaj nowe auto do bazy</h1>
 
 <style>
     .error {color: #ff3c00;
@@ -17,26 +17,15 @@
 <form class="form" method="post">
     <div class="form-row">
         <label for="name">Numer rejestracyjny </label>
-        <input type="text"  name="reg_number" required> *
+        <input type="text"  name="registration_number" required> *
     </div>
     <br>
-    <div class="form-row">
-        <label for="email">Model: </label>
-        <input type="text"  name="model"  required> *
-    </div>
-    <br>
-    <div class="form-row">
-        <label for="milage">Przebieg: </label>
-        <input type="text"  name="milage"  required> *
-    </div>
-    <br>
-
-
     <div class="form-row">
         <label for="mark" >Marka: </label>
-        <select name="select_marka" id="id_marka" required>
+        <select name="mark" id="id_marka" required>
             <option value=""></option>
             <option value="toyota">Toyota</option>
+            <option value="mini">Mini</option>
             <option value="porsche">Porsche</option>
             <option value="saab">Saab</option>
             <option value="volkswagen">Volkswagen</option>
@@ -44,9 +33,19 @@
         </select> *
     </div>
     <br>
+    <div class="form-row">
+        <label for="model">Model: </label>
+        <input type="text"  name="model"  required> *
+    </div>
+    <br>
+    <div class="form-row">
+        <label for="mileage">Przebieg: </label>
+        <input type="text"  name="mileage"  required> *
+    </div>
+    <br>
     <div>
     <label for = "capacity"> Pojemność </label>
-    <select name="select_capacity" id="Pojemnosc" required>
+    <select name="capacity" id="Pojemnosc" required>
         <option value=""></option>
         <option value="0.8">0.8</option>
         <option value="0.9">0.9</option>
@@ -56,7 +55,7 @@
     <br>
     <div>
     <label for = "years_production"> Rok produkcji </label>
-    <select name="select_years_production" id="id_years_production" required> *
+    <select name="years_production" id="id_years_production" required> *
         <option value=""></option>
         <option value="1996">1995</option>
         <option value="1996">1996</option>
@@ -68,7 +67,7 @@
     <br>
     <div>
     <label for = "label_body"> Rodzaj nadwozia</label>
-    <select name="select_body" id="Rodzaj nadwozia" required>
+    <select name="body" id="Rodzaj nadwozia" required>
         <option value = ""></option>
         <option value = "kombi">Kombi</option>
         <option value = "sedan">Sedan</option>
@@ -82,34 +81,21 @@
     <div class="form-message"></div>
     <div class="form-row">
         <br>
-        <button type="submit" class="button submit-btn">
-            Wyślij
+        <button type="submit" name="button" class="button submit-btn"  style="color: #008000; padding: 7px">
+            Dodaj
         </button>
     </div>
 </form>
 
-
-
-
-
-
-
-
-<!--    <br/>-->
-<!--//   <input style="padding: 5px" type="submit" value="Dodaj auto" id="button" />//onclick="validateForm()"/>-->
-<!--    <br/>-->
-<!--    <br/>-->
-
-
 <script>
     const form = document.querySelector("form");
-    const inputRegNumber = form.querySelector("input[name=reg_number]");
+    const inputRegistrationNumber = form.querySelector("input[name=registration_number]");
     const inputModel = form.querySelector("input[name=model]");
-    const inputMileage = form.querySelector("input[name=milage]");
-    const inputMark = form.querySelector("select[name=select_marka]");
-    const inputCapacity = form.querySelector("select[name=select_capacity]");
-    const inputYearsProduction = form.querySelector("select[name=select_years_production]");
-    const inputBody = form.querySelector("select[name=select_body]");
+    const inputMileage = form.querySelector("input[name=mileage]");
+    const inputMark = form.querySelector("select[name=mark]");
+    const inputCapacity = form.querySelector("select[name=capacity]");
+    const inputYearsProduction = form.querySelector("select[name=years_production]");
+    const inputBody = form.querySelector("select[name=body]");
     const formMessage = form.querySelector(".form-message");
 
     form.setAttribute("novalidate", true);
@@ -122,8 +108,11 @@
 //-------------------------
 //2 etap - sprawdzamy poszczególne pola gdy ktoś chce wysłać formularz
 //-------------------------
-        if (!inputRegNumber.checkValidity()) {
+        if (!inputRegistrationNumber.checkValidity()) {
             formErrors.push("Numer rejestracyjny");
+        }
+        if (!inputMark.checkValidity()) {
+            formErrors.push("Marka");
         }
 
         if (!inputModel.checkValidity()) {
@@ -132,9 +121,7 @@
         if (!inputMileage.checkValidity()) {
             formErrors.push("Przebieg");
         }
-        if (!inputMark.checkValidity()) {
-            formErrors.push("Marka");
-        }
+
         if (!inputCapacity.checkValidity()) {
             formErrors.push("Pojemność");
         }
@@ -157,40 +144,54 @@
 `;
         }
     });
+
+
 </script>
+
+<?
+if (isset($_POST['mark'])) {
+    $mark = $_POST['mark'];
+
+}if (isset($_POST['model'])) {
+    $model = $_POST['model'];
+
+}if (isset($_POST['capacity'])) {
+    $capacity = $_POST['capacity'];
+
+}if (isset($_POST['years_production'])) {
+    $years_production = $_POST['years_production'];
+
+}if (isset($_POST['body'])) {
+    $body = $_POST['body'];
+
+}if (isset($_POST['registration_number'])) {
+    $registration_number = $_POST['registration_number'];
+
+}if (isset($_POST['mileage'])) {
+    $mileage = $_POST['mileage'];
+
+//echo $registration_number."<br/>";
+//echo $model."<br/>";
+//echo $mileage."<br/>";
+//echo $brand."<br/>";
+//echo $capacity."<br/>";
+//echo $years_production."<br/>";
+//echo $body."<br/>";
+
+
+    $conn = new mysqli('localhost', 'root', '', 'rent_cars');
+
+    $wynik=$conn ->query ("INSERT INTO cars  (brand,model,production_year,capacity,body,milage,registration_number)
+    VALUES ('$mark','$model','$years_production','$capacity','$body','$mileage','$registration_number')");
+
+    if (mysqli_error($conn)==""){
+        echo('<h3 style ="color:steelblue ;">Nowe auto'." ".$_POST['mark']." ".$_POST['model']." ".'dodane do bazy. </h3>');
+    }
+    else {
+          echo('<h3 style="color:indianred ;">Coś poszło nie tak... : </h3>'. mysqli_error($conn));
+    }
+}
+
+?>
 </body>
-<!--//-->
-<!--//$brand=isset($_POST['select_marka']);-->
-<!--//$model=isset($_POST['model']);-->
-<!--//$capacity=isset($_POST ['select_capacity']);-->
-<!--//$years_production=isset($_POST['select_years_production']);-->
-<!--//$body=isset($_POST['select_body']);-->
-<!--//$registration_number=isset($_POST['registration_number']);-->
-<!--//$mileage=isset($_POST['mileage']);-->
-<!---->
-<!---->
-<!--//echo $brand."<br/>";-->
-<!--//echo $model."<br/>";-->
-<!--//echo $years_production."<br/>";-->
-<!--//echo $capacity."<br/>";-->
-<!--//echo $body."<br/>";-->
-<!--//echo $registration_number."<br/>";-->
-<!--//echo $mileage."<br/>";-->
-<!--//-->
-<!--//$sql="INSERT INTO cars  (brand,model,production_year,capacity,body,milage,registration_number)-->
-<!--//VALUES ('$marka','$model','$years_production','$capacity','$body','$mileage','$registration_number')"; */-->
-<!---->
-<!--//$sql="INSERT INTO test (kolumna1) VALUES ($name)";-->
-<!---->
-<!--//$conn = new mysqli('localhost', 'root', '', 'rent_cars');-->
-<!--//$wynik=$conn ->query("INSERT INTO cars  (brand,model,production_year,capacity,body,milage,registration_number)-->
-<!--//VALUES ('$brand','$model','$years_production','$capacity','$body','$mileage','$registration_number')");-->
-<!--//echo("Error database: " . mysqli_error($conn));-->
-<!--//-->
-<!--//-->
-<!--//?>-->
-<!---->
-<!--</body>-->
-<!---->
-<!---->
 </html>
