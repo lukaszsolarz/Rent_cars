@@ -6,7 +6,7 @@
     <title>Wypozyczalnia - pokaż auta</title>
 </head>
 
-<body>
+<body style="background-color: lightgray">
 <h2>Wszystkie dostępne auta w bazie:</h2>
 <br/>
 <style>
@@ -17,13 +17,13 @@
     }
 
     td, th {
-        border: 1px solid #dddddd;
+        border: 1px solid lightslategray;
         text-align: left;
         padding: 8px;
     }
 
     tr:nth-child(even) {
-        background-color: #dddddd;
+        background-color: darkgray;
     }
 </style>
 <?php
@@ -38,17 +38,16 @@ if($wynik ->num_rows >0)
         echo "<th> ID</th>";
         echo "<th> Marka</th>";
         echo "<th> Model</th>";
-        echo "<th> Nadwozie</th>";
-        echo "<th> Rok</th>";
+        echo "<th> Rok produkcji</th>";
         echo "<th> Pojemność</th>";
+        echo "<th> Nadwozie</th>";
         echo "<th> Przbieg</th>";
+        echo "<th> Nr. rejestracyjny</th>";
 
     echo "</tr>";
     while ($wiersz = $wynik ->fetch_assoc())
     {
         echo "<tr>";
-
-
         echo "<td>".$wiersz["id_cars"]."</td>";
         echo "<td>".$wiersz["brand"]."</td>";
         echo "<td>".$wiersz["model"]."</td>";
@@ -56,6 +55,7 @@ if($wynik ->num_rows >0)
         echo "<td>".$wiersz["capacity"]."</td>";
         echo "<td>".$wiersz["body"]."</td>";
         echo "<td>".$wiersz["milage"]." km. "."</td>";
+        echo "<td>".$wiersz["registration_number"]."</td>";
         echo "</tr>";
 
     }
@@ -63,7 +63,7 @@ if($wynik ->num_rows >0)
 }
 else {
 
-    echo "Baza jest pusta, należy najpierw dodać auta.";
+    echo "Baza jest pusta, należy najpierw dodać auto.";
 }
 ?>
 

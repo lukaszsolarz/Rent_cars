@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdcef667-fd16-4286-96f6-3a22189bf907" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../../../bin" afterDir="false" />
@@ -820,12 +838,6 @@
       <change afterPath="$PROJECT_DIR$/../quiz/pytania.sql" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../quiz/zapytanie.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/wypozyczalnia.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../icons/README" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../icons/README.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../icons/a.gif" afterDir="false" />
@@ -27420,6 +27432,13 @@
       <change afterPath="$PROJECT_DIR$/../../var/proftpd/proftpd.delay" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../var/proftpd/start.err" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../xampp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodaj_auto.php" beforeDir="false" afterPath="$PROJECT_DIR$/dodaj_auto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokaz_auta.php" beforeDir="false" afterPath="$PROJECT_DIR$/pokaz_auta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokaz_wypozyczone.php" beforeDir="false" afterPath="$PROJECT_DIR$/pokaz_wypozyczone.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styleCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/styleCss.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27429,8 +27448,16 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
@@ -27445,19 +27472,27 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="cdcef667-fd16-4286-96f6-3a22189bf907" name="Default Changelist" comment="" />
@@ -27469,31 +27504,37 @@
       <workItem from="1604697552346" duration="529000" />
       <workItem from="1604699112717" duration="298000" />
       <workItem from="1604702804918" duration="8313000" />
-      <workItem from="1604790980045" duration="8005000" />
+      <workItem from="1604790980045" duration="18344000" />
+      <workItem from="1605042575483" duration="932000" />
+      <workItem from="1605799975974" duration="1762000" />
+      <workItem from="1605894145275" duration="2171000" />
+      <workItem from="1606040828971" duration="7567000" />
+      <workItem from="1606127945616" duration="1088000" />
+      <workItem from="1606130426957" duration="19194000" />
+      <workItem from="1607015901619" duration="5889000" />
+      <workItem from="1607104633926" duration="17663000" />
+      <workItem from="1607161572389" duration="9578000" />
+      <workItem from="1607369846729" duration="1000" />
+      <workItem from="1607371045775" duration="2832000" />
+      <workItem from="1607459489694" duration="9033000" />
+      <workItem from="1607795740872" duration="688000" />
+      <workItem from="1607797296624" duration="11650000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="147" y="23" width="800" height="717" key="#Intentions" timestamp="1604829226781">
-      <screen x="0" y="23" width="1280" height="717" />
-    </state>
-    <state x="147" y="23" width="800" height="717" key="#Intentions/0.23.1280.717@0.23.1280.717" timestamp="1604829226781" />
-    <state x="386" y="258" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604707082012">
-      <screen x="0" y="23" width="1280" height="726" />
-    </state>
-    <state x="386" y="258" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1280.726@0.23.1280.726" timestamp="1604707082012" />
-    <state x="373" y="114" key="NewPhpClassDialog" timestamp="1604792221694">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state x="373" y="114" key="NewPhpClassDialog/0.23.1280.716@0.23.1280.716" timestamp="1604792221694" />
-    <state x="589" y="389" key="NewPhpFileDialog" timestamp="1604792238103">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state x="589" y="389" key="NewPhpFileDialog/0.23.1280.716@0.23.1280.716" timestamp="1604792238103" />
-    <state x="459" y="316" key="NewPhpFileDialog/0.23.1280.726@0.23.1280.726" timestamp="1604696120408" />
-    <state x="459" y="317" key="NewPhpFileDialog/0.23.1280.728@0.23.1280.728" timestamp="1604695611778" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

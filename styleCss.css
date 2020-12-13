@@ -30,7 +30,7 @@
 }
 .footer{
 height: 30px;
-    background-color: black;
+    background-color: rgba(0,0,0,0.86);
     color: lightgray;
     clear: both;
     text-align: right;

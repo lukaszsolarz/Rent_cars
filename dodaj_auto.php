@@ -24,12 +24,18 @@
         <label for="mark" >Marka: </label>
         <select name="mark" id="id_marka" required>
             <option value=""></option>
-            <option value="toyota">Toyota</option>
+            <option value="fiat">Fiat</option>
+            <option value="kia">Kia</option>
+            <option value="mazda">Mazda</option>
             <option value="mini">Mini</option>
+            <option value="mercede">Mercedes</option>
+            <option value="opel">Opel</option>
             <option value="porsche">Porsche</option>
+            <option value="peugot">Peugot</option>
             <option value="saab">Saab</option>
+            <option value="toyota">Toyota</option>
             <option value="volkswagen">Volkswagen</option>
-            <option value="audi">Audi</option>
+            <option value="Volvo">volvo</option>
         </select> *
     </div>
     <br>
@@ -50,6 +56,21 @@
         <option value="0.8">0.8</option>
         <option value="0.9">0.9</option>
         <option value="1.0">1.0</option>
+        <option value="1.1">1.1</option>
+        <option value="1.2">1.2</option>
+        <option value="1.3">1.3</option>
+        <option value="1.4">1.4</option>
+        <option value="1.5">1.5</option>
+        <option value="1.6">1.6</option>
+        <option value="1.7">1.7</option>
+        <option value="1.8">1.8</option>
+        <option value="1.9">1.9</option>
+        <option value="2.0">2.0</option>
+        <option value="2.1">2.1</option>
+        <option value="2.2">2.2</option>
+        <option value="2.3">2.3</option>
+        <option value="2.4">2.4</option>
+        <option value="2.5">2.5</option>
     </select> *
     </div>
     <br>
@@ -57,11 +78,35 @@
     <label for = "years_production"> Rok produkcji </label>
     <select name="years_production" id="id_years_production" required> *
         <option value=""></option>
-        <option value="1996">1995</option>
+        <option value="1995">1995</option>
         <option value="1996">1996</option>
         <option value="1997">1997</option>
-        <option value="1997">1998</option>
-        <option value="1997">1999</option>
+        <option value="1998">1998</option>
+        <option value="1999">1999</option>
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+        <option value="2002">2002</option>
+        <option value="2003">2003</option>
+        <option value="2004">2004</option>
+        <option value="2005">2005</option>
+        <option value="2006">2006</option>
+        <option value="2007">2007</option>
+        <option value="2008">2008</option>
+        <option value="2009">2009</option>
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+
+
     </select> *
     </div>
     <br>
@@ -69,11 +114,11 @@
     <label for = "label_body"> Rodzaj nadwozia</label>
     <select name="body" id="Rodzaj nadwozia" required>
         <option value = ""></option>
-        <option value = "kombi">Kombi</option>
-        <option value = "sedan">Sedan</option>
-        <option value = "hatchback">Hatchback</option>
-        <option value = "suv">SUV</option>
         <option value = "coupe">Coupe</option>
+        <option value = "kombi">Kombi</option>
+        <option value = "hatchback">Hatchback</option>
+        <option value = "sedan">Sedan</option>
+        <option value = "suv">SUV</option>
         <option value = "van">Van</option>
     </select> *
     </div>
@@ -86,7 +131,9 @@
         </button>
     </div>
 </form>
-
+<form action="pokaz_auta.php" method="post" >
+    <button name="show_cars" style="color:darkcyan; padding: 7px;">Pokaż wszystkie auta w bazie</button>
+</form>
 <script>
     const form = document.querySelector("form");
     const inputRegistrationNumber = form.querySelector("input[name=registration_number]");
@@ -185,7 +232,8 @@ if (isset($_POST['mark'])) {
     VALUES ('$mark','$model','$years_production','$capacity','$body','$mileage','$registration_number')");
 
     if (mysqli_error($conn)==""){
-        echo('<h3 style ="color:steelblue ;">Nowe auto'." ".$_POST['mark']." ".$_POST['model']." ".'dodane do bazy. </h3>');
+
+        echo('<h3 style ="color:steelblue ;">Nowe auto'." ".$_POST['mark']." ".$_POST['model']." ".'zostało dodane do bazy. </h3>');
     }
     else {
           echo('<h3 style="color:indianred ;">Coś poszło nie tak... : </h3>'. mysqli_error($conn));
@@ -193,5 +241,7 @@ if (isset($_POST['mark'])) {
 }
 
 ?>
+
 </body>
+
 </html>
