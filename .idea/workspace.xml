@@ -27432,6 +27432,13 @@
       <change afterPath="$PROJECT_DIR$/../../var/proftpd/proftpd.delay" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../var/proftpd/start.err" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../xampp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodaj_auto.php" beforeDir="false" afterPath="$PROJECT_DIR$/dodaj_auto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokaz_auta.php" beforeDir="false" afterPath="$PROJECT_DIR$/pokaz_auta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokaz_wypozyczone.php" beforeDir="false" afterPath="$PROJECT_DIR$/pokaz_wypozyczone.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styleCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/styleCss.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27511,7 +27518,11 @@
       <workItem from="1607371045775" duration="2832000" />
       <workItem from="1607459489694" duration="9033000" />
       <workItem from="1607795740872" duration="688000" />
+<<<<<<< HEAD
       <workItem from="1607797296624" duration="11915000" />
+=======
+      <workItem from="1607797296624" duration="11650000" />
+>>>>>>> c90162f
     </task>
     <servers />
   </component>
