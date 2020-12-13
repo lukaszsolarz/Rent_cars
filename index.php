@@ -5,28 +5,58 @@
     <meta http-equiv="X-UA-Compatible">
     <title> WYPOZYCZALNIA AUT </title>
 </head>
+<link rel="stylesheet" href="styleCss.css"/>
+<body>
+<div class="container">
+    <div class="logo">
+        <h1>Wypożyczalnia Aut</h1>
+    </div>
 
-<body style="background-color: lightgray">
-
-    <h2 style="border: solid tomato;text-align: center ">SYSTEM WYPOŻYCZANIA AUT</h2>
-    <br />
+    <div class="nav">
+        <br>
         <form action = dodaj_wypozyczenie.php method="post">
-            <button style="color: darkcyan; padding: 5px"> Wypożycz </button>
+            <button class="button_main_page"> Wypożycz </button>
         </form>
-    <br />
+        <br>
         <form action =pokaz_auta.php method="post">
-            <button style="color: darkcyan; padding: 5px"> Pokaż wszystkie auta w bazie</button>
+            <button class="button_main_page"> Pokaż wszystkie auta w bazie</button>
         </form>
-    <br />
-        <form action=pokaz_wypozyczone.php method="post">
-            <button style="color: darkcyan; padding: 5px"> Pokaż aktualnie wypożyczone</button>
-        </form>
-    <br />
+        <br>
 
-    <form action = dodaj_auto.php method="post">
-        <button style="color: darkcyan; padding: 5px"> Dodaj nowe auto do bazy</button>
-    </form>
-        </div>
+        <form action ="clients.php.php" method="post">
+            <button class="button_main_page"> Pokaż klientów</button>
+        </form>
+        <br>
+        
+        <form action=pokaz_wypozyczone.php method="post">
+            <button class="button_main_page"> Pokaż aktualnie wypożyczone</button>
+        </form>
+        <br>
+        <form  action = dodaj_auto.php method="post">
+            <button class="button_main_page"> Dodaj nowe auto do bazy</button>
+        </form>
+        <br>
+        <form action="help.php" method="post" >
+            <button class="button_main_page">Pomoc</button>
+
+        </form>
+    </div>
+
+</div>
+
+<div class="content">
+    <h4> Sytem testowy umożliwiający zarządzania wypożyczonymi autami.</h4>
+</div>
+
+<div class="ad">reklama
+</div>
+
+<div class="footer">
+    <h4>Copyright 2020 - Wszelkie prawa zastrzeżone. Designed by Lukasz Solarz</h4>
+</div>
+
+</div>
+
 <?php
 
 require_once "connect.php";
@@ -38,14 +68,8 @@ if( $polaczenie->connect_errno!=0)
 }
 else
 {
-    //$sql="INSERT INTO cars
-    //( brand, model, `production_year`, `capacity`, body, `milage`)
-    //VALUES  ('Mazda', '323', 2001, 1.4, 'sedan', 300200)";
-    //$rezultat =@$polaczenie->query($sql);
 }
 $polaczenie ->close();
-
-
 
 ?>
 </body>
