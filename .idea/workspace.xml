@@ -27432,10 +27432,7 @@
       <change afterPath="$PROJECT_DIR$/../../var/proftpd/proftpd.delay" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../var/proftpd/start.err" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../xampp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dodaj_wypozyczenie.php" beforeDir="false" afterPath="$PROJECT_DIR$/dodaj_wypozyczenie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokaz_wypozyczone.php" beforeDir="false" afterPath="$PROJECT_DIR$/pokaz_wypozyczone.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styleCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/styleCss.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27518,7 +27515,7 @@
       <workItem from="1607797296624" duration="12089000" />
       <workItem from="1609018907427" duration="778000" />
       <workItem from="1610055792132" duration="32000" />
-      <workItem from="1611500703002" duration="927000" />
+      <workItem from="1611500703002" duration="1362000" />
     </task>
     <servers />
   </component>
