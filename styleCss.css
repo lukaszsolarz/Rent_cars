@@ -11,13 +11,13 @@
 .nav{
     width:20%;
     height: 500px;
-    background-color: lightsteelblue;
+    background-color: #4579bc;
     float: left;
 }
 .ad{
     width: 20%;
     height: 500px;
-    background-color: beige;
+    background-color: #aeae08;
     float: left;
 }
 
