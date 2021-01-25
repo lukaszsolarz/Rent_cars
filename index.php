@@ -9,7 +9,7 @@
 <body>
 <div class="container">
     <div class="logo">
-        <h1>Wypożyczalnia Aut</h1>
+        <h1>Wypożyczalnia Aut1</h1>
     </div>
 
     <div class="nav">
@@ -44,8 +44,8 @@
 
 </div>
 
-<div class="content">
-    <h4> Sytem testowy umożliwiający zarządzania wypożyczonymi autami.</h4>
+<div class="content" style="text-align: center">
+    <h4>Sytem testowy umożliwiający zarządzania wypożyczonymi autami.</h4>
 </div>
 
 <div class="ad">reklama

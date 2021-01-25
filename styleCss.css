@@ -3,7 +3,7 @@
 }
 .logo
 {
-    background-color: burlywood;
+    background-color: #e9d4ba;
     height: 40px;
     text-align: center;
 
@@ -11,13 +11,13 @@
 .nav{
     width:20%;
     height: 500px;
-    background-color: lightsteelblue;
+    background-color: #b4d4f6;
     float: left;
 }
 .ad{
     width: 20%;
     height: 500px;
-    background-color: beige;
+    background-color: #d0d088;
     float: left;
 }
 
@@ -30,8 +30,8 @@
 }
 .footer{
 height: 30px;
-    background-color: rgba(0,0,0,0.86);
-    color: lightgray;
+    background-color: rgba(21, 20, 20, 0.86);
+    color: #ff3c00;
     clear: both;
     text-align: right;
     padding: 10px;
