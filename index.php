@@ -9,7 +9,7 @@
 <body>
 <div class="container">
     <div class="logo">
-        <h1>Wypożyczalnia Aut1</h1>
+        <h1>Wypożyczalnia Aut</h1>
     </div>
 
     <div class="nav">
