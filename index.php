@@ -44,11 +44,9 @@
         </form>
     </div>
 
-<div class="content" style="text-align: center">
+<div class="content">
     <h4>Sytem testowy umożliwiający zarządzania wypożyczonymi autami.</h4>
 </div>
-
-<div class="ad">reklama</div>
 
 <div class="footer">
     <h4>Copyright 2020 - Wszelkie prawa zastrzeżone. Designed by Lukasz Solarz</h4>
