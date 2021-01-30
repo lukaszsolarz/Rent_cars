@@ -6,12 +6,14 @@
     <title> WYPOZYCZALNIA AUT </title>
 </head>
 <link rel="stylesheet" href="styleCss.css"/>
-<body>
+<body onload="odliczanie()";>
 <div class="container">
+
     <div class="logo">
         <h1>Wypożyczalnia Aut</h1>
     </div>
-
+        <h2><div class="clock" id="zegar"></h2>
+    </div>
     <div class="nav">
         <br>
         <form action = dodaj_wypozyczenie.php method="post">
@@ -42,21 +44,17 @@
         </form>
     </div>
 
-</div>
-
 <div class="content" style="text-align: center">
     <h4>Sytem testowy umożliwiający zarządzania wypożyczonymi autami.</h4>
 </div>
 
-<div class="ad">reklama
-</div>
+<div class="ad">reklama</div>
 
 <div class="footer">
     <h4>Copyright 2020 - Wszelkie prawa zastrzeżone. Designed by Lukasz Solarz</h4>
 </div>
 
 </div>
-
 <?php
 
 require_once "connect.php";
@@ -72,4 +70,29 @@ else
 $polaczenie ->close();
 
 ?>
+<script type = "text/javascript">
+
+    function odliczanie()
+    {
+        var dzisiaj = new Date();
+
+        var dzien  = dzisiaj.getDate();
+        var miesiac  = dzisiaj.getMonth()+1;
+        var rok  = dzisiaj.getFullYear();
+
+        var godzina = dzisiaj.getHours();
+        if (godzina <10)
+            godzina ="0"+godzina;
+        var minuta = dzisiaj.getMinutes();
+        if (minuta <10)
+            minuta ="0"+minuta;
+        var sekunda = dzisiaj.getSeconds();
+        if (sekunda <10)
+            sekunda ="0"+sekunda;
+
+        document.getElementById("zegar").innerHTML=godzina+":"+minuta+":"+sekunda+" <br>"+dzien+"/"+miesiac+"/"+rok;
+        setTimeout("odliczanie()",1000);
+    }
+
+</script>
 </body>

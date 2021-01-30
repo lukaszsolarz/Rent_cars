@@ -1,2 +1,0 @@
-<?php
-wersja 1 
