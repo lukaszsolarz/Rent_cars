@@ -45,7 +45,7 @@
     </div>
 
 <div class="content">
-    <h4>Sytem testowy umożliwiający zarządzania wypożyczonymi autami.</h4>
+    <h3>Aktualnie wypożyczone: </h3>
 </div>
 
 <div class="footer">

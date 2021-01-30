@@ -4,7 +4,7 @@
 }
 .logo
 {
-    background-color: #e9d4ba;
+    background-color: #cab499;
     height: 60px;
     width: 80%;
     text-align: center;
@@ -23,14 +23,14 @@
 .nav{
     width:20%;
     height: 565px;
-    background-color: #b4d4f6;
+    background-color: #9ec1ea;
     float: left;
 }
 
 .content{
     width: 80%;
     height: 565px;
-    background-color: lavender;
+    background-color: #9a9abf;
     float: left;
 
 
@@ -38,7 +38,7 @@
 .footer{
 height: 30px;
     background-color: rgba(21, 20, 20, 0.86);
-    color: #8a8888;
+    color: #b1afaf;
     clear: both;
     text-align: right;
     padding: 10px;

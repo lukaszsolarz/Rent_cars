@@ -27433,6 +27433,7 @@
       <change afterPath="$PROJECT_DIR$/../../var/proftpd/start.err" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../xampp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodaj_wypozyczenie.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styleCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/styleCss.css" afterDir="false" />
     </list>
@@ -27522,7 +27523,8 @@
       <workItem from="1612007975986" duration="1452000" />
       <workItem from="1612009791232" duration="1775000" />
       <workItem from="1612012051646" duration="1399000" />
-      <workItem from="1612013880928" duration="551000" />
+      <workItem from="1612013880928" duration="952000" />
+      <workItem from="1612019037515" duration="742000" />
     </task>
     <servers />
   </component>
