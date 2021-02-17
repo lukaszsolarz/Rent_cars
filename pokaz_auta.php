@@ -43,6 +43,7 @@ if($wynik ->num_rows >0)
         echo "<th> Nadwozie</th>";
         echo "<th> Przbieg</th>";
         echo "<th> Nr. rejestracyjny</th>";
+        echo "<th> Wypożyczone</th>";
 
     echo "</tr>";
     while ($wiersz = $wynik ->fetch_assoc())
@@ -56,6 +57,7 @@ if($wynik ->num_rows >0)
         echo "<td>".$wiersz["body"]."</td>";
         echo "<td>".$wiersz["milage"]." km. "."</td>";
         echo "<td>".$wiersz["registration_number"]."</td>";
+        echo "<td>".$wiersz["rented"]."</td>";
         echo "</tr>";
 
     }

@@ -27433,9 +27433,11 @@
       <change afterPath="$PROJECT_DIR$/../../var/proftpd/start.err" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../xampp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dodaj_wypozyczenie.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodaj_wypozyczenie.php" beforeDir="false" afterPath="$PROJECT_DIR$/dodaj_wypozyczenie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokaz_auta.php" beforeDir="false" afterPath="$PROJECT_DIR$/pokaz_auta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokaz_wypozyczone.php" beforeDir="false" afterPath="$PROJECT_DIR$/pokaz_wypozyczone.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styleCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/styleCss.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27455,6 +27457,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
@@ -27524,7 +27534,17 @@
       <workItem from="1612009791232" duration="1775000" />
       <workItem from="1612012051646" duration="1399000" />
       <workItem from="1612013880928" duration="952000" />
-      <workItem from="1612019037515" duration="742000" />
+      <workItem from="1612019037515" duration="1019000" />
+      <workItem from="1612023614827" duration="607000" />
+      <workItem from="1612043539677" duration="617000" />
+      <workItem from="1612045846254" duration="1714000" />
+      <workItem from="1612047812913" duration="1792000" />
+      <workItem from="1612049644055" duration="1045000" />
+      <workItem from="1612051522798" duration="1072000" />
+      <workItem from="1612087961639" duration="167000" />
+      <workItem from="1613418096926" duration="584000" />
+      <workItem from="1613421225724" duration="556000" />
+      <workItem from="1613421860755" duration="855000" />
     </task>
     <servers />
   </component>
