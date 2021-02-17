@@ -6,7 +6,7 @@
     <title>Wypozyczalnia - pokaż auta</title>
 </head>
 <body style="background-color: lightgray">
-<h2>Stan wszystkich wypożyczonych aut</h2>
+<h2>Aktualnie wypożyczone: </h2>
 
 
 <style>
