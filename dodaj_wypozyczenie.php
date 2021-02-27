@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Wypozyczalnia - wypożycz</title>
 </head>
-<h1>Wypożycz Auto</h1>
+<h1>Dostępne auta:</h1>
 
 <style>
     .error {color: #ff3c00;
@@ -22,25 +22,16 @@ $wynik=$conn ->query("SELECT * FROM cars");
 
 if($wynik ->num_rows >0)
 {
-
-    echo "<select>";
     while ($wiersz = $wynik ->fetch_assoc())
     {
-
-        echo "<option>";
-//        echo $wiersz["id_cars"]."</td>";
+        echo "</br><input type=radio>";
         echo $wiersz["brand"]." // ";
         echo $wiersz["model"]." // ";
         echo $wiersz["production_year"]." rok // ";
         echo $wiersz["capacity"]." // ";
-//        echo $wiersz["body"]."</td>";
-//        echo $wiersz["milage"]." km. "."</td>";
         echo $wiersz["registration_number"];
-        echo "</option>";
-
-
+        echo "</br></input>";
     }
-    echo "</select>";
 }
 else {
 
