@@ -44,7 +44,6 @@ if($wynik ->num_rows >=0)
     echo "<th> Przbieg</th>";
     echo "<th> Nr. rejestracyjny</th>";
     echo "<th> Wypożyczone</th>";
-
     echo "</tr>";
     while ($wiersz = $wynik ->fetch_assoc())
     {

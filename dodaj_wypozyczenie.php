@@ -1,45 +1,56 @@
 <!DOCTYPE HTML>
 <html lang="pl" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Wypozyczalnia - wypożycz</title>
 </head>
-<h1>Dostępne auta:</h1>
+<h1>Dostępne auta w bazie: </h1>
 
 <style>
-    .error {color: #ff3c00;
 </style>
 
 <body style="background-color: lightgray">
 <form class="form" method="post">
-    <label for="cars" >Auto: </label>
 
-<?php
+    <?php
+    $conn = new mysqli('localhost', 'root', '', 'rent_cars');
+    $wynik = $conn->query("SELECT * FROM cars");
 
-$conn = new mysqli('localhost', 'root', '', 'rent_cars');
-$wynik=$conn ->query("SELECT * FROM cars");
+    if ($wynik->num_rows > 0) {
 
-if($wynik ->num_rows >0)
-{
-    while ($wiersz = $wynik ->fetch_assoc())
-    {
-        echo "</br><input type=radio>";
-        echo $wiersz["brand"]." // ";
-        echo $wiersz["model"]." // ";
-        echo $wiersz["production_year"]." rok // ";
-        echo $wiersz["capacity"]." // ";
-        echo $wiersz["registration_number"];
-        echo "</br></input>";
+        echo "<form method=post>";
+        echo "<table>";
+            echo "<tr>";
+                echo "<th> nr. rej </th>";
+                echo "<th> marka </th>";
+                echo "<th> model</th>";
+            echo "</tr>";
+
+
+        while ($wiersz = $wynik->fetch_assoc()) {
+            echo "<tr>";
+                    echo "<td><input type=radio name=check_list[] value= $wiersz[id_cars]>";
+                    echo $wiersz["registration_number"] . "</td></input>";;
+                    echo "<td>".$wiersz["brand"] . "</td>";
+                    echo "<td>".$wiersz["model"] . "</td>";
+            echo "</tr>";
+        }
+
+        echo "</table>";
+        echo "</br></br><input type=submit name=submit value=Wypożycz>";
+        echo "</form>";
     }
-}
-else {
 
-    echo "Baza jest pusta, należy najpierw dodać auto.";
-}
-?>
+
+    if (!empty($_POST['check_list'])) {
+        foreach ($_POST['check_list'] as $check) {
+            echo "id auta: " . $check; //echoes the value set in the HTML form for each checked checkbox.
+            //so, if I were to check 1, 3, and 5 it would echo value 1, value 3, value 5.
+            //in your case, it would echo whatever $row['Report ID'] is equivalent to.
+        }
+    }
+    ?>
 </form>
-<button id="add_rent_button">Wypożycz</button>
 </body>
-</html>
 
