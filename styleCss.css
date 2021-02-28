@@ -51,3 +51,25 @@ height: 30px;
 #add_rent_button{
     padding: 100px;
 }
+.table_cars {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.td_table_cars{
+    border: 1px solid lightslategray;
+    text-align: left;
+    padding: 8px;
+
+}
+.th_table_cars {
+    border: 1px solid lightslategray;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: darkgray;
+}
+

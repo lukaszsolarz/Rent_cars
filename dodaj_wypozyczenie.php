@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Wypozyczalnia - wypożycz</title>
 </head>
-<h1>Dostępne auta w bazie: </h1>
+<link rel="stylesheet" href="styleCss.css"/>
+<h1>Nie wypożyczone : </h1>
 
 <style>
 </style>
@@ -20,20 +21,22 @@
     if ($wynik->num_rows > 0) {
 
         echo "<form method=post>";
-        echo "<table>";
+        echo "<table class='table_cars'>";
             echo "<tr>";
-                echo "<th> nr. rej </th>";
-                echo "<th> marka </th>";
-                echo "<th> model</th>";
+                echo "<td class='td_table_cars'>";
+                echo "<th class='th_table_cars'> nr. rej </th>";
+                echo "<th class='th_table_cars'> marka </th>";
+                echo "<th class='th_table_cars'> model</th>";
             echo "</tr>";
 
 
         while ($wiersz = $wynik->fetch_assoc()) {
             echo "<tr>";
-                    echo "<td><input type=radio name=check_list[] value= $wiersz[id_cars]>";
-                    echo $wiersz["registration_number"] . "</td></input>";;
-                    echo "<td>".$wiersz["brand"] . "</td>";
-                    echo "<td>".$wiersz["model"] . "</td>";
+
+                    echo "<td class='td_table_cars'><input type=radio name=check_list[] value= $wiersz[id_cars]>";
+                    echo "<td class='td_table_cars'>".$wiersz["registration_number"]."</td>";
+                    echo "<td class='td_table_cars'>".$wiersz["brand"] . "</td>";
+                    echo "<td class='td_table_cars'>".$wiersz["model"] . "</td>";
             echo "</tr>";
         }
 
