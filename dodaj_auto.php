@@ -217,15 +217,6 @@ if (isset($_POST['mark'])) {
 }if (isset($_POST['mileage'])) {
     $mileage = $_POST['mileage'];
 
-//echo $registration_number."<br/>";
-//echo $model."<br/>";
-//echo $mileage."<br/>";
-//echo $brand."<br/>";
-//echo $capacity."<br/>";
-//echo $years_production."<br/>";
-//echo $body."<br/>";
-
-
     $conn = new mysqli('localhost', 'root', '', 'rent_cars');
 
     $wynik=$conn ->query ("INSERT INTO cars  (brand,model,production_year,capacity,body,milage,registration_number)
