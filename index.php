@@ -6,14 +6,16 @@
     <title> WYPOZYCZALNIA AUT </title>
 </head>
 <link rel="stylesheet" href="styleCss.css"/>
-<body onload="odliczanie()";>
+<body class=body onload="odliczanie()";>
+
 <div class="container">
 
     <div class="logo">
         <h1>Wypożyczalnia Aut</h1>
     </div>
-        <h2><div class="clock" id="zegar"></h2>
-    </div>
+
+    <div class="clock" id="zegar" ></div>
+
     <div class="nav">
         <br>
         <form action = dodaj_wypozyczenie.php method="post">

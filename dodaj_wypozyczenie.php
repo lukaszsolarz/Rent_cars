@@ -26,10 +26,11 @@ ini_set('display_errors', 1);
 
         echo "<table class='table_cars'>";
             echo "<tr>";
-                echo "<td class='td_table_cars'>";
-                echo "<th class='th_table_cars'> nr. rej </th>";
-                echo "<th class='th_table_cars'> marka </th>";
-                echo "<th class='th_table_cars'> model</th>";
+                echo "<td class='td_table_cars' width=1%>";
+                echo "<th class='th_table_cars' width=24%>nr. rej</th>";
+                echo "<th class='th_table_cars' width=25%>marka</th>";
+                echo "<th class='th_table_cars' width=25%>model</th>";
+                echo "<th class='th_table_cars' width=25%>rok</th>";
             echo "</tr>";
 
 
@@ -38,8 +39,9 @@ ini_set('display_errors', 1);
 
                     echo "<td class='td_table_cars'><input type=radio name=check_list[] value= $wiersz[id_cars]>";
                     echo "<td class='td_table_cars'>".$wiersz["registration_number"]."</td>";
-                    echo "<td class='td_table_cars'>".$wiersz["brand"] . "</td>";
-                    echo "<td class='td_table_cars'>".$wiersz["model"] . "</td>";
+                    echo "<td class='td_table_cars'>".$wiersz["brand"]."</td>";
+                    echo "<td class='td_table_cars'>".$wiersz["model"]."</td>";
+                    echo "<td class='td_table_cars'>".$wiersz["production_year"]."</td>";
             echo "</tr>";
         }
 
@@ -53,14 +55,13 @@ ini_set('display_errors', 1);
     ?>
 <?php
     if (!empty($_POST['check_list'])) {
-        foreach ($_POST['check_list'] as $checkId)
+        foreach ($_POST['check_list'] as $check_id_cars)
             $conn = new mysqli('localhost', 'root', '', 'rent_cars');
-            echo "id auta: " . $checkId;
 
             if (isset($_POST['check_list'])) {
                 $submit = $_POST['submit'];
-                $query = $conn->query("UPDATE cars SET `rented`= true WHERE `id_cars` =$checkId");
-                header("Refresh:0"); 
+                $query = $conn->query("UPDATE cars SET `rented`= true WHERE `id_cars` =$check_id_cars");
+                header("Refresh:0");
 
             }
         }
