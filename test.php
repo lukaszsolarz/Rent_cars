@@ -5,44 +5,22 @@
     <meta http-equiv="X-UA-Compatible">
     <title> WYPOZYCZALNIA AUT </title>
 </head>
-<?php
-echo "<table>";
-echo "<tr>";
-echo "<th> ID</th>";
-echo "<th> Marka</th>";
-echo "<th> Model</th>";
 
+<body>
+<script>
+    $numer = $_POST['numer'];
+    if(strlen($numer)!=9 && !is_int($numer))
+    {
+        $udana_rejestracja = false;
+        $_SESSION['e-numer'] = "Wpisz poprawny numer telefonu!";
+    }
 
-echo "</tr>";
+</script>
 
-{
-    echo "<tr>";
-    echo "<td>a</td>";
-    echo "<td>b</td>";
-    echo "<td>c</td>";
-    echo "</tr>";
-    echo "<tr>";
-    echo "<td>a</td>";
-    echo "<td>b</td>";
-    echo "<td>c</td>";
-    echo "</tr>";
-    echo "<tr>";
-    echo "<td>a</td>";
-    echo "<td>b</td>";
-    echo "<td>c</td>";
-    echo "</tr>";
-    echo "<tr>";
-    echo "<td>a</td>";
-    echo "<td>b</td>";
-    echo "<td>c</td>";
-    echo "</tr>";
-    echo "<tr>";
-    echo "<td>a</td>";
-    echo "<td>b</td>";
-    echo "<td>c</td>";
-    echo "</tr>";
+<div id="ex2" class="ex">
+  <h5>Ex2 - Validation</h5>
+  <input type="text" id="ex2_text" placeholder="phone number" />
+  <div id="ex2_content"></div>
+</div>
 
-
-}
-echo "</table>";
-?>
+</body>

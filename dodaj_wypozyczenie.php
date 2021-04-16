@@ -21,7 +21,6 @@ ini_set('display_errors', 1);
     $conn = new mysqli('localhost', 'root', '', 'rent_cars');
     $wynik = $conn->query("SELECT * FROM cars where rented=0");
 
-//    echo "<form method=post>";
     if ($wynik->num_rows > 0) {
 
         echo "<table class='table_cars'>";
@@ -47,6 +46,36 @@ ini_set('display_errors', 1);
 
         echo "</table>";
         echo "</br></br><input type=submit name=submit value=Wypożycz>";
+    }
+    else{
+        echo"Sorry...Wszystkie auta są aktualnie wypożyczone";
+    }
+
+    $wynik = $conn->query("SELECT * FROM clients");
+
+    //    echo "<form method=post>";
+    if ($wynik->num_rows > 0) {
+
+        echo "<table class='table_clients'>";
+        echo "<tr>";
+        echo "<td class='td_table_clients' width=1%>";
+        echo "<th class='th_table_clients' width=24%>Imię</th>";
+        echo "<th class='th_table_clients' width=25%>Nazwisko</th>";
+        echo "<th class='th_table_clients' width=25%>Pesel</th>";
+        echo "</tr>";
+
+
+        while ($wiersz = $wynik->fetch_assoc()) {
+            echo "<tr>";
+
+            echo "<td class='td_table_clients'><input type=radio name=check_list[] value= $wiersz[personal_identity_number]>";
+            echo "<td class='td_table_clients'>".$wiersz["name"]."</td>";
+            echo "<td class='td_table_clients'>".$wiersz["surname"]."</td>";
+            echo "<td class='td_table_clients'>".$wiersz["personal_identity_number"]."</td>";
+            echo "</tr>";
+        }
+
+        echo "</table>";
         echo "</form>";
     }
     else{
@@ -54,6 +83,7 @@ ini_set('display_errors', 1);
     }
     ?>
 <?php
+
     if (!empty($_POST['check_list'])) {
         foreach ($_POST['check_list'] as $check_id_cars)
             $conn = new mysqli('localhost', 'root', '', 'rent_cars');
@@ -64,6 +94,7 @@ ini_set('display_errors', 1);
                 header("Refresh:0");
 
             }
+
         }
 ?>
 

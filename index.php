@@ -27,7 +27,7 @@
         </form>
         <br>
 
-        <form action ="clients.php.php" method="post">
+        <form action ="pokaz_klientow.php" method="post">
             <button class="button_main_page"> Pokaż klientów</button>
         </form>
         <br>
@@ -42,7 +42,10 @@
         <br>
         <form action="help.php" method="post" >
             <button class="button_main_page">Pomoc</button>
-
+        </form>
+        <br>
+        <form action="dodaj_klienta.php" method="post" >
+            <button class="button_main_page">Dodaj klienta</button>
         </form>
     </div>
 
