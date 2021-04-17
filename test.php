@@ -4,6 +4,11 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible">
     <title> WYPOZYCZALNIA AUT </title>
+    <form>
+        <input type="text" pattern="^+[4]{1}\[8]{1}$" placeholder="+48 123 123 123" required>kod</input>
+        <button type="submit">ok</button>
+
+    </form>
 </head>
 
 <body>
@@ -17,10 +22,5 @@
 
 </script>
 
-<div id="ex2" class="ex">
-  <h5>Ex2 - Validation</h5>
-  <input type="text" id="ex2_text" placeholder="phone number" />
-  <div id="ex2_content"></div>
-</div>
 
 </body>

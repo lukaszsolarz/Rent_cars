@@ -44,9 +44,8 @@
 
         let formErrors = [];
 
-//-------------------------
 //2 etap - sprawdzamy poszczególne pola gdy ktoś chce wysłać formularz
-//-------------------------
+
         if (!inputName.checkValidity()) {
             formErrors.push("Imię");
         }    if (!inputSurname.checkValidity()) {
@@ -68,7 +67,6 @@
         }
     });
 
-    }
 </script>
 
 <?
